@@ -1,0 +1,729 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/css?family=Modern+Antiqua);
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}
+ul{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;}
+q:before,q:after{content:'';}
+object,embed{vertical-align:top;}
+legend{display:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+img,abbr,acronym,fieldset{border:0;}
+
+body {
+    font: 14px/1.9 'Noto Sans JP', Arial, Verdana, 游ゴシック, YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo, sans-serif;
+    font-weight: 300;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    color: #000;
+    background: rgb(247, 255, 255);
+}
+
+a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+a:hover, .active {
+    text-decoration: underline;
+}
+
+a:active, a:focus, input:active, input:focus {
+    outline: 0;
+}
+
+.three a:hover{
+    text-decoration: none;
+}
+
+/* 슬라이드 버튼 🈪
+------------------------------------------------------------*/
+#btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    left: 48%;
+}
+
+
+
+.bar {
+    width: 24px;
+    height: 3px;
+    background: #000;
+    transition: all 0.3s;
+}
+.c{
+    font-size: 16PX;
+    text-align: center;
+}
+
+/* Updated navigation menu styling for horizontal layout */
+#btnnav {
+    display: none;
+    position: static;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#btnnav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+#btnnav li {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    flex: 1 1 auto; /* Allow items to grow and shrink as needed */
+}
+
+
+#btnnav li button {
+    display: block;
+    padding: 15px 25px;
+    background: none;
+    border: none;
+    text-align: left;
+
+    cursor: pointer;
+    width: 100%; /* Make buttons take full width of their container */
+}
+
+#btnnav li button:hover {
+    background: #f0f0f0;
+}
+/* 🈪→X */
+#btn.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+#btn.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#btn.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+#btnnav.open {
+    display: flex;
+    justify-content: center;
+}
+
+#btnnav.open ~ .c{
+    display: none;
+}
+
+/* 버튼 색상 */
+#bc1{
+      background-color: lightblue;
+  }
+#bc2{
+      background-color: pink;
+  }
+#bc3{
+      background-color: plum;
+  }
+#bc4{
+      background-color: lightgoldenrodyellow;
+  }
+
+/* 버튼 타이틀 */
+.bt1{
+    font-size: 20px;
+    color: pink ;
+    -webkit-text-stroke:0.4px #000;
+}
+.bt2{
+    font-size: 20px;
+    color: lightblue ;
+    -webkit-text-stroke: 0.4px #000;
+}
+.bt3{
+    font-size: 20px;
+    color: yellow ;
+    -webkit-text-stroke: 0.4px #000;
+}
+.bt4{
+    font-size: 20px;
+    color: plum ;
+    -webkit-text-stroke: 0.4px #000;
+}
+
+
+/* 헤더
+------------------------------------------------------------*/
+ h1 {
+    background: rgb(247, 255, 255);
+}
+
+#mainnav a {
+    color: #000;
+    font-family: 'Modern Antiqua', 'Noto Sans JP', serif;
+}
+
+/* 푸터
+------------------------------------------------------------*/
+#footer {
+    clear: both;
+    padding: 50px 10px 50px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* 공통
+------------------------------------------------------------*/
+h1, h2 {
+    font-family: 'Modern Antiqua', 'Noto Sans JP', serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    clear: both;
+}
+
+section h2 {
+    width: 60%;
+    margin: 70px auto;
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+}
+
+section h2 span {
+    padding-bottom: 20px;
+    border-bottom: 3px solid #000;
+}
+
+.inner {
+    width: 80%;
+    margin: 0 auto;
+   
+}
+.inner p{
+    font-size: 20px;
+}
+
+#sec03 .inner, #sec04 .inner {
+    border-bottom: 1px solid #a0a0a0;
+}
+
+#sec04 p{
+    font-size: 18px;
+}
+
+.innerS {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.innerS p{
+    font-size: 14px;
+    background-color: rgb(252, 252, 138);
+}
+
+/* SEC01 PROFILE
+------------------------------------------------------------*/
+#sec01 {
+    padding-bottom: 0 !important;
+}
+
+.article {
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 50px;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+}
+
+.article img {
+    float: left;
+    margin: 5px 20px 20px;
+    border-radius: 90px;
+}
+
+.article p {
+    margin-bottom: 20px;
+}
+
+#sec04 .two p{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgb(252, 252, 138);
+}
+
+/* SEC02 MOTIVE
+------------------------------------------------------------*/
+
+
+/* SEC03 INTERVIEW
+------------------------------------------------------------*/  
+.one p{
+    width: 60%;
+    max-width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgb(252, 252, 138);
+}
+
+#sec03 .inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#sec03 .col4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#sec03 .col4 li {
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#sec03 .col4 .img {
+    margin: 0 auto;
+}
+
+#sec03 .col4 p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+#sec03 .col4 img {
+    width: 168px;
+    height: 168px;
+    margin-bottom: 10px;
+}
+
+/* SEC05 OTHERS
+------------------------------------------------------------*/
+#sec05 {
+    padding: 20px 0;
+}
+
+#sec05 header {
+    margin-bottom: 50px;
+}
+
+#sec05 .inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#sec05 .col2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 항목 사이의 간격 조정 */
+    justify-content: center; /* 가운데 정렬 */
+}
+
+#sec05 .col2 li {
+    width: calc(50% - 20px); /* 2개의 항목을 한 줄에 배치 */
+    box-sizing: border-box;
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+#sec05 .col2 .img {
+    margin: 0 auto;
+}
+
+#sec05 .col2 p {
+    font-size: 14px; /* 텍스트 크기 조정 */
+    line-height: 1.7; /* 줄 높이 조정 */
+}
+
+#sec05 .col2 img {
+    width: 168px; /* 이미지 크기 조정 */
+    height: 168px; /* 이미지 크기 조정 */
+    margin-bottom: 10px; /* 이미지와 텍스트 간격 조정 */
+}
+
+
+#sec05 .col2 img {
+    width: 168px; /* 이미지 크기 조정 */
+    height: 168px; /* 이미지 크기 조정 */
+    margin-bottom: 10px; /* 이미지와 텍스트 간격 조정 */
+}
+#sec05 .col4 .name {
+	font-size: 16px; /* 이름 텍스트 크기 */
+	font-weight: bold; /* 이름 텍스트 굵기 */
+	margin-top: 5px; /* 이미지와 이름 텍스트 간격 조정 */
+}
+
+#sec05 .col4 a {
+	text-decoration: none; /* 링크 밑줄 제거 */
+	color: inherit; /* 링크 색상 상속 */
+	display: block; /* 링크를 블록 요소로 만들어 클릭 가능한 영역을 확장 */
+	transition: transform 0.2s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+#sec05 .col4 a:hover {
+	transform: scale(1.05); /* 호버 시 전체 항목 확대 */
+}
+/* 모바일 대응 */
+@media only screen and (max-width: 640px){
+    #sec05 .col2 {
+        flex-direction: column; /* 모바일에서는 항목을 수직으로 배치 */
+    }
+    
+    #sec05 .col2 li {
+        width: 100%; /* 모바일에서는 각 항목을 100% 폭으로 설정 */
+        margin-bottom: 20px; /* 항목 사이의 간격 조절 */
+    }
+    
+    #sec05 .col2 li:last-child {
+        margin-bottom: 0; /* 마지막 항목의 하단 간격 제거 */
+    }
+
+    .innerS {
+        width: 94%;
+        padding-bottom: 30px;
+        font-size: 3vw;
+    }
+
+    .article {
+        display: block;
+        text-align: center;
+        font-size: 2.8vw;
+        white-space: nowrap;
+    }
+
+    .article img {
+        margin: 0 auto 20px;
+        float: none;
+    }
+
+    .article p {
+        font-size: 12px; /* 모바일 화면에 맞는 폰트 크기 조정 */
+        margin: 0 auto; /* 텍스트 중앙 정렬 */
+        width: 90%; /* 가독성을 위한 여백 추가 */
+    }
+
+    #map iframe {
+        width: 96% !important;
+        left: 2%;
+    }
+
+    .inner p {
+        font-size: 16px; /* 모바일에서 읽기 쉽게 폰트 크기 조정 */
+        color: #000; /* 텍스트 색상 설정 */
+        text-align: center;
+    }
+
+    span {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+   
+    #sec02 .two p{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2.9vw;
+        background-color: rgb(252, 252, 138);
+    }
+
+    #sec03 .two p{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2.9vw;
+        background-color: rgb(252, 252, 138);
+    }
+
+
+    #sec04 .two p{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2.9vw;
+        background-color: rgb(252, 252, 138);
+    }
+
+    .three {
+		display: none;
+	}
+
+    #sidebar {
+        position: fixed;
+        width: 100%;
+        z-index: 500;
+        
+    }
+
+    #sidebarWrap {
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #sidebar h1 {
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    #sidebar h1 img {
+        width: 100px;
+		max-height: 100px;
+
+    }
+
+    a#menu {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+	top:10px;
+    }
+
+    #menuBtn {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 18px;
+        height: 2px;
+        margin: -1px 0 0 -7px;
+        background: #000;
+        transition: .2s;
+    }
+
+    #menuBtn:before, #menuBtn:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        background: #000;
+        transition: .3s;
+    }
+
+    #menuBtn:before {
+        margin-top: -7px;
+    }
+
+    #menuBtn:after {
+        margin-top: 5px;
+    }
+
+    a#menu .close {
+        background: transparent;
+    }
+
+    a#menu .close:before, a#menu .close:after {
+        margin-top: 0;
+    }
+
+    a#menu .close:before {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+
+    a#menu .close:after {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+
+   
+
+    #mainnav {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: right;
+    }
+
+    #mainnav ul {
+        border-bottom: 1px solid #ccc;
+        background: #fff;
+        text-align: left;
+     
+    }
+    .panel{
+        position: relative;
+        top:-10px;
+    }
+
+    #mainnav li a {
+        position: relative;
+        display: block;
+        padding: 15px 25px;
+        border-bottom: 1px solid #ccc;
+        color: #000;
+        font-weight: 400;
+    }
+
+    #mainnav li a:before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        width: 6px;
+        height: 6px;
+        margin: -4px 0 0 0;
+        border-top: solid 2px #000;
+        border-right: solid 2px #000;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    #mainnav #sns li {
+        display: inline-block;
+    }
+
+    #mainnav #sns li a {
+        position: relative;
+        display: inline-block;
+        padding: 15px 10px 0;
+        border: 0;
+    }
+
+    #mainnav #sns li a:before {
+        border: 0;
+    }
+
+    .col4 li {
+        margin: 0 auto 50px;
+        display: block;
+        text-align: center;
+    }
+
+    section h2 {
+        margin: 55px auto;
+    }
+	
+    #btnnav li button {
+        font-size: 12px;
+    }
+
+    #btnnav li button{
+        padding: 3px 5px;
+    }
+	
+    #btnnav{
+        margin: 0 auto;
+    }
+
+    #btnnav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+    }
+
+}
+
+@media only screen and (min-width: 800px){
+    body{
+        font-size:14px;
+    }
+    
+    #wrapper{
+        width: 100%;
+    }
+    
+    #content{
+        width: 75%;
+    }
+    
+    #sidebar{
+        width: 12%;
+        position: fixed;
+        top: 0;
+        right: 4%;
+        background:rgb(247, 255, 255);
+    }
+    
+    a#menu{
+        display:none;
+    }    
+
+    .panel{
+        display:block !important;
+    }
+    
+    #sidebar h1{
+        padding: 30px 0;
+    }
+
+    #mainnav li{
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    
+    #sns{
+        margin-top: 50px;
+    }
+    
+    #sns li{
+        display: inline-block;
+        padding-right: 10px;
+    }
+
+    #sns a:hover img{
+        opacity: .8;
+    }
+}
+
+    /* SEC03 BRAND
+    -----------------*/
+    .col4 {
+        text-align: center;
+    }
+
+    .col4 li {
+        display: inline-block;
+        width: 18%;
+        padding: 0 3%;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    #map iframe {
+        height: 200px !important;
+    }
+
+    #footer {
+        padding: 30px 10px 70px 0;
+    }
+
